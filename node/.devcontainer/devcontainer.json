@@ -1,0 +1,26 @@
+{
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "node",
+	"workspaceFolder": "/workspace",
+	"features": {},
+	"mounts": [
+		{
+			"source": "${localWorkspaceFolder}",
+			"target": "${containerWorkspaceFolder}",
+			"type": "bind"
+		}
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+			]
+		}
+	},
+	"onCreateCommand": {
+		"make-workspace": [ "mkdir", "-p", "${containerWorkspaceFolder}" ]
+	},
+	// "postCreateCommand": "npm run init",
+	"remoteUser": "root"
+}

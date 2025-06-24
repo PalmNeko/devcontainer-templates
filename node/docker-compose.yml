@@ -1,0 +1,6 @@
+services:
+  node:
+    container_name: node
+    image: node:22
+    init: true
+    tty: true
